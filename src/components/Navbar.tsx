@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <span className="font-display font-bold text-xl">Lorem Ipsum</span>
+            <span className="font-display font-bold text-xl text-[#9003fc]">Beesite</span>
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
@@ -32,7 +32,7 @@ const Navbar = () => {
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="font-medium text-sm text-gray-700 hover:text-black transition-colors"
+                  className="font-medium text-sm text-gray-700 hover:text-[#9003fc] transition-colors"
                 >
                   {item}
                 </a>

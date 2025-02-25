@@ -14,24 +14,24 @@ const Team = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {[
             {
-              name: "Alex Morgan",
-              role: "CEO & Founder",
-              image: "https://source.unsplash.com/200x200/?portrait&1",
+              name: "Ahmad Akbar",
+              role: "Founder & CEO",
+              image: "https://source.unsplash.com/200x200/?professional,man&1",
             },
             {
-              name: "Sarah Chen",
+              name: "Fathul Ilham",
+              role: "Technical Director",
+              image: "https://source.unsplash.com/200x200/?professional,man&2",
+            },
+            {
+              name: "Ahmad Akbar",
               role: "Creative Director",
-              image: "https://source.unsplash.com/200x200/?portrait&2",
-            },
-            {
-              name: "James Wilson",
-              role: "Technical Lead",
-              image: "https://source.unsplash.com/200x200/?portrait&3",
+              image: "https://source.unsplash.com/200x200/?professional,man&3",
             },
           ].map((member, index) => (
             <div key={index} className="text-center">
               <div className="relative mb-6 inline-block">
-                <div className="w-48 h-48 mx-auto rounded-full overflow-hidden">
+                <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-[#9003fc]/10">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -43,7 +43,7 @@ const Team = () => {
               <h3 className="font-display text-xl font-bold mb-2">
                 {member.name}
               </h3>
-              <p className="text-gray-600">{member.role}</p>
+              <p className="text-[#9003fc]">{member.role}</p>
             </div>
           ))}
         </div>
