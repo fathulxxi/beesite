@@ -88,14 +88,6 @@ const Portfolio = () => {
           </p>
         </div>
 
-        {/* Static Projects */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {projects.slice(0, 2).map((project, index) => (
-            <ProjectCard key={index} project={project} />
-          ))}
-        </div>
-
-        {/* Carousel Projects */}
         <div className="relative px-12">
           <Carousel
             opts={{
@@ -105,7 +97,7 @@ const Portfolio = () => {
             className="w-full"
           >
             <CarouselContent>
-              {projects.slice(2).map((project, index) => (
+              {projects.map((project, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <ProjectCard project={project} />
                 </CarouselItem>
