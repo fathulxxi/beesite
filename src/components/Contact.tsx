@@ -1,5 +1,17 @@
 
+import { useToast } from "@/hooks/use-toast";
+
 const Contact = () => {
+  const { toast } = useToast();
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    toast({
+      title: "Success!",
+      description: "Your message has been sent successfully. We'll get back to you soon!",
+    });
+  };
+
   return (
     <section id="contact" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,7 +24,7 @@ const Contact = () => {
           </p>
         </div>
         <div className="max-w-xl mx-auto">
-          <form className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label
                 htmlFor="name"
@@ -23,6 +35,7 @@ const Contact = () => {
               <input
                 type="text"
                 id="name"
+                required
                 className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/5 focus:border-gray-300 transition-colors"
                 placeholder="Your name"
               />
@@ -37,6 +50,7 @@ const Contact = () => {
               <input
                 type="email"
                 id="email"
+                required
                 className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/5 focus:border-gray-300 transition-colors"
                 placeholder="Your email"
               />
@@ -51,13 +65,14 @@ const Contact = () => {
               <textarea
                 id="message"
                 rows={4}
+                required
                 className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/5 focus:border-gray-300 transition-colors"
                 placeholder="Your message"
               />
             </div>
             <button
               type="submit"
-              className="w-full px-8 py-4 bg-black text-white rounded-lg font-medium hover:bg-gray-900 transition-colors"
+              className="w-full px-8 py-4 bg-[#9003fc] text-white rounded-lg font-medium hover:bg-[#7502d1] transition-colors"
             >
               Send Message
             </button>

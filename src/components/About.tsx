@@ -1,7 +1,7 @@
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-white">
+    <section id="about" className="py-24 bg-gradient-to-b from-white via-[#F1F0FB] to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
@@ -32,7 +32,7 @@ const About = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className="p-8 rounded-2xl bg-gray-50 hover:bg-gray-100 transition-colors"
+              className="p-8 rounded-2xl bg-white hover:bg-gray-50 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300"
             >
               <h3 className="font-display text-xl font-bold mb-4">
                 {item.title}

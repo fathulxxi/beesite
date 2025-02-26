@@ -16,22 +16,22 @@ const Team = () => {
             {
               name: "Ahmad Akbar",
               role: "Founder & CEO",
-              image: "https://source.unsplash.com/200x200/?professional,man&1",
+              image: "https://source.unsplash.com/200x200/?ceo,business",
             },
             {
               name: "Fathul Ilham",
               role: "Technical Director",
-              image: "https://source.unsplash.com/200x200/?professional,man&2",
+              image: "https://source.unsplash.com/200x200/?developer,technology",
             },
             {
-              name: "Ahmad Akbar",
+              name: "Hidayat",
               role: "Creative Director",
-              image: "https://source.unsplash.com/200x200/?professional,man&3",
+              image: "https://source.unsplash.com/200x200/?designer,creative",
             },
           ].map((member, index) => (
             <div key={index} className="text-center">
               <div className="relative mb-6 inline-block">
-                <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-[#9003fc]/10">
+                <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-[#9003fc]/10 transform transition-transform duration-300 hover:scale-105">
                   <img
                     src={member.image}
                     alt={member.name}

@@ -48,7 +48,7 @@ const Portfolio = () => {
   ];
 
   const ProjectCard = ({ project }: { project: typeof projects[0] }) => (
-    <div className="group relative overflow-hidden rounded-2xl bg-white shadow-md transition-all hover:shadow-xl">
+    <div className="group relative overflow-hidden rounded-2xl bg-white shadow-md transition-all hover:shadow-xl my-4">
       <div className="aspect-[16/10] overflow-hidden">
         <img
           src={project.image}
