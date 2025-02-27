@@ -1,4 +1,3 @@
-
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -15,13 +14,17 @@ const Contact = () => {
   return (
     <section id="contact" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-16 relative">
+          <span className="text-sm font-medium text-[#9003fc] tracking-wider uppercase mb-3 block">
             Get in Touch
+          </span>
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#2A1D5C] to-[#9003fc] bg-clip-text text-transparent">
+            Contact Us
           </h2>
-          <p className="text-gray-600">
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
             Have a project in mind? We would love to hear from you.
           </p>
+          <div className="absolute left-1/2 -translate-x-1/2 -bottom-4 w-24 h-1 bg-gradient-to-r from-[#9003fc] to-[#00E5FF]" />
         </div>
         <div className="max-w-xl mx-auto">
           <form onSubmit={handleSubmit} className="space-y-6">

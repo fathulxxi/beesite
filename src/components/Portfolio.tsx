@@ -1,4 +1,3 @@
-
 import {
   Carousel,
   CarouselContent,
@@ -79,13 +78,17 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-16 relative">
+          <span className="text-sm font-medium text-[#9003fc] tracking-wider uppercase mb-3 block">
+            Our Work
+          </span>
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#2A1D5C] to-[#9003fc] bg-clip-text text-transparent">
             Our Portfolio
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
             Trusted by world-class companies for delivering exceptional digital solutions.
           </p>
+          <div className="absolute left-1/2 -translate-x-1/2 -bottom-4 w-24 h-1 bg-gradient-to-r from-[#9003fc] to-[#00E5FF]" />
         </div>
 
         <div className="relative px-12">
