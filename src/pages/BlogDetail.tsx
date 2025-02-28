@@ -1,10 +1,11 @@
 
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 const blogPosts = [
   {
@@ -287,6 +288,8 @@ const blogPosts = [
 ];
 
 const BlogDetail = () => {
+  useScrollToTop();
+  const navigate = useNavigate();
   const { id } = useParams();
   const blogId = parseInt(id || "1");
   
@@ -297,16 +300,23 @@ const BlogDetail = () => {
     .filter(p => p.id !== post.id)
     .slice(0, 3);
 
+  const handleGoBack = () => {
+    navigate(-1);
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
       
       <div className="bg-gray-50 pt-20 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
-          <Link to="/blog" className="inline-flex items-center text-[#9003fc] hover:text-[#7502d1] mb-8">
+          <button 
+            onClick={handleGoBack}
+            className="inline-flex items-center text-[#9003fc] hover:text-[#7502d1] mb-8"
+          >
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to all articles
-          </Link>
+            Back to previous page
+          </button>
           
           <article className="bg-white rounded-2xl shadow-md overflow-hidden">
             <div className="h-80 overflow-hidden">

@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 const blogPosts = [
   {
@@ -57,6 +58,8 @@ const blogPosts = [
 ];
 
 const BlogPage = () => {
+  useScrollToTop();
+  
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
