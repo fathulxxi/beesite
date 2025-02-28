@@ -1,5 +1,11 @@
 
 const Hero = () => {
+  const handleGetStarted = () => {
+    document.getElementById('contact')?.scrollIntoView({
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <div className="relative min-h-screen flex items-center bg-[#2A1D5C] overflow-hidden">
       {/* Background with diagonal cut */}
@@ -18,7 +24,10 @@ const Hero = () => {
               We transform ideas into exceptional digital experiences, pushing the
               boundaries of innovation and design.
             </p>
-            <button className="px-8 py-4 bg-[#FF3366] text-white rounded-lg font-medium hover:bg-[#E62E5C] transition-colors">
+            <button 
+              onClick={handleGetStarted}
+              className="px-8 py-4 bg-[#FF3366] text-white rounded-lg font-medium hover:bg-[#E62E5C] transition-colors"
+            >
               Get Started
             </button>
           </div>

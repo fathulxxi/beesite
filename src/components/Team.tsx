@@ -1,3 +1,4 @@
+
 const Team = () => {
   return (
     <section id="team" className="py-24 bg-white">
@@ -19,22 +20,22 @@ const Team = () => {
             {
               name: "Ahmad Akbar",
               role: "Founder & CEO",
-              image: "https://source.unsplash.com/200x200/?ceo,business",
+              image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop",
             },
             {
               name: "Fathul Ilham",
               role: "Technical Director",
-              image: "https://source.unsplash.com/200x200/?developer,technology",
+              image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop",
             },
             {
               name: "Hidayat",
               role: "Creative Director",
-              image: "https://source.unsplash.com/200x200/?designer,creative",
+              image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?q=80&w=400&auto=format&fit=crop",
             },
           ].map((member, index) => (
-            <div key={index} className="text-center">
+            <div key={index} className="text-center group">
               <div className="relative mb-6 inline-block">
-                <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-[#9003fc]/10 transform transition-transform duration-300 hover:scale-105">
+                <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-[#9003fc]/10 transform transition-transform duration-300 group-hover:scale-105 group-hover:border-[#9003fc]/30">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -43,7 +44,7 @@ const Team = () => {
                   />
                 </div>
               </div>
-              <h3 className="font-display text-xl font-bold mb-2">
+              <h3 className="font-display text-xl font-bold mb-2 group-hover:text-[#9003fc] transition-colors">
                 {member.name}
               </h3>
               <p className="text-[#9003fc]">{member.role}</p>

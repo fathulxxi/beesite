@@ -1,3 +1,6 @@
+
+import { Briefcase, Code, PenTool, LineChart } from "lucide-react";
+
 const Services = () => {
   return (
     <section id="services" className="py-24 bg-gray-50">
@@ -21,31 +24,38 @@ const Services = () => {
               title: "Digital Strategy",
               description:
                 "Strategic planning and consultation for digital transformation initiatives.",
+              icon: <Briefcase className="w-12 h-12 text-[#9003fc] mb-4" />,
             },
             {
               title: "Web Development",
               description:
                 "Custom web applications and websites built with cutting-edge technologies.",
+              icon: <Code className="w-12 h-12 text-[#9003fc] mb-4" />,
             },
             {
               title: "UI/UX Design",
               description:
                 "User-centered design solutions that create engaging digital experiences.",
+              icon: <PenTool className="w-12 h-12 text-[#9003fc] mb-4" />,
             },
             {
               title: "Digital Marketing",
               description:
                 "Comprehensive digital marketing strategies to grow your online presence.",
+              icon: <LineChart className="w-12 h-12 text-[#9003fc] mb-4" />,
             },
           ].map((service, index) => (
             <div
               key={index}
-              className="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+              className="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-all hover:translate-y-[-5px] group"
             >
-              <h3 className="font-display text-xl font-bold mb-4">
-                {service.title}
-              </h3>
-              <p className="text-gray-600">{service.description}</p>
+              <div className="flex flex-col items-center text-center">
+                {service.icon}
+                <h3 className="font-display text-xl font-bold mb-4 group-hover:text-[#9003fc] transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600">{service.description}</p>
+              </div>
             </div>
           ))}
         </div>

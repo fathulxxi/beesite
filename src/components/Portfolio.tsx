@@ -1,3 +1,4 @@
+
 import {
   Carousel,
   CarouselContent,
@@ -11,43 +12,43 @@ const Portfolio = () => {
     {
       name: "Google",
       description: "AI-powered search optimization platform",
-      image: "https://source.unsplash.com/1498050108023-c5249f4df085",
+      image: "https://images.unsplash.com/photo-1481487196290-c152efe083f5?q=80&w=1024&auto=format&fit=crop",
       tech: "Machine Learning, Big Data",
     },
     {
       name: "Microsoft",
       description: "Enterprise cloud solutions architecture",
-      image: "https://source.unsplash.com/1605810230434-7631ac76ec81",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1024&auto=format&fit=crop",
       tech: "Cloud Computing, Azure",
     },
     {
       name: "Apple",
       description: "iOS app development and UI/UX design",
-      image: "https://source.unsplash.com/1483058712412-4245e9b90334",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1024&auto=format&fit=crop",
       tech: "iOS, Swift, Design Systems",
     },
     {
       name: "Meta",
       description: "Social media analytics dashboard",
-      image: "https://source.unsplash.com/1519389950473-47ba0277781c",
+      image: "https://images.unsplash.com/photo-1597733336794-12d05021d510?q=80&w=1024&auto=format&fit=crop",
       tech: "React, Data Visualization",
     },
     {
       name: "Amazon",
       description: "E-commerce platform optimization",
-      image: "https://source.unsplash.com/1487058792275-0ad4aaf24ca7",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=1024&auto=format&fit=crop",
       tech: "AWS, Microservices",
     },
     {
       name: "Tesla",
       description: "Vehicle management system interface",
-      image: "https://source.unsplash.com/1483058712412-4245e9b90334",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1024&auto=format&fit=crop",
       tech: "IoT, Real-time Analytics",
     },
   ];
 
   const ProjectCard = ({ project }: { project: typeof projects[0] }) => (
-    <div className="group relative overflow-hidden rounded-2xl bg-white shadow-md transition-all hover:shadow-xl my-4">
+    <div className="group relative overflow-hidden rounded-2xl bg-white shadow-md transition-all hover:shadow-xl my-4 hover:translate-y-[-5px]">
       <div className="aspect-[16/10] overflow-hidden">
         <img
           src={project.image}
@@ -57,7 +58,7 @@ const Portfolio = () => {
         />
       </div>
       <div className="p-6">
-        <h3 className="font-display text-xl font-bold text-gray-900 mb-2">
+        <h3 className="font-display text-xl font-bold text-gray-900 mb-2 group-hover:text-[#9003fc] transition-colors">
           {project.name}
         </h3>
         <p className="text-gray-600 mb-4">{project.description}</p>
