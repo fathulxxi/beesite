@@ -58,16 +58,16 @@ const Blog = () => {
     <section id="blog" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 relative">
-          <span className="text-sm font-medium text-[#9003fc] tracking-wider uppercase mb-3 block">
+          <span className="text-sm font-medium text-[#EFBF04] tracking-wider uppercase mb-3 block">
             Latest Articles
           </span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#2A1D5C] to-[#9003fc] bg-clip-text text-transparent">
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#33280A] to-[#EFBF04] bg-clip-text text-transparent">
             Our Blog
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
             Stay updated with the latest insights, trends, and tips in the digital world.
           </p>
-          <div className="absolute left-1/2 -translate-x-1/2 -bottom-4 w-24 h-1 bg-gradient-to-r from-[#9003fc] to-[#00E5FF]" />
+          <div className="absolute left-1/2 -translate-x-1/2 -bottom-4 w-24 h-1 bg-gradient-to-r from-[#EFBF04] to-[#00E5FF]" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -88,12 +88,12 @@ const Blog = () => {
                 <div className="text-sm text-gray-500 mb-2">
                   {post.author} • {post.date}
                 </div>
-                <h3 className="font-display text-xl font-bold mb-3 hover:text-[#9003fc] transition-colors">
+                <h3 className="font-display text-xl font-bold mb-3 hover:text-[#EFBF04] transition-colors">
                   {post.title}
                 </h3>
                 <p className="text-gray-600 mb-4 line-clamp-3">{post.description}</p>
                 <Link to={`/blog/${post.id}`}>
-                  <Button className="px-0 py-0 h-auto text-[#9003fc] hover:text-[#7502d1] transition-colors bg-transparent hover:bg-transparent">
+                  <Button className="px-0 py-0 h-auto text-[#EFBF04] hover:text-[#D6AD04] transition-colors bg-transparent hover:bg-transparent">
                     Read More →
                   </Button>
                 </Link>
@@ -104,7 +104,7 @@ const Blog = () => {
 
         <div className="flex justify-center mt-12">
           <Link to="/blog">
-            <Button className="px-8 py-3 h-auto bg-[#9003fc] hover:bg-[#7502d1] text-white rounded-lg transition-colors">
+            <Button className="px-8 py-3 h-auto bg-[#EFBF04] hover:bg-[#D6AD04] text-white rounded-lg transition-colors">
               See All Articles
             </Button>
           </Link>

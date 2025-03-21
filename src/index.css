@@ -13,7 +13,7 @@
   }
 
   ::selection {
-    @apply bg-black/10;
+    @apply bg-[#EFBF04]/20;
   }
 }
 

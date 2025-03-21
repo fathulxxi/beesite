@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-[#2A1D5C] text-white">
+    <footer className="bg-[#33280A] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Address */}
@@ -29,7 +29,7 @@ const Footer = () => {
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase()}`}
-                    className="hover:text-[#00E5FF] transition-colors"
+                    className="hover:text-[#EFBF04] transition-colors"
                   >
                     {item}
                   </a>
@@ -42,19 +42,19 @@ const Footer = () => {
           <div>
             <h3 className="font-display text-xl font-bold mb-4">Connect With Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-[#00E5FF] transition-colors">
+              <a href="#" className="hover:text-[#EFBF04] transition-colors">
                 <Facebook className="w-6 h-6" />
               </a>
-              <a href="#" className="hover:text-[#00E5FF] transition-colors">
+              <a href="#" className="hover:text-[#EFBF04] transition-colors">
                 <Instagram className="w-6 h-6" />
               </a>
-              <a href="#" className="hover:text-[#00E5FF] transition-colors">
+              <a href="#" className="hover:text-[#EFBF04] transition-colors">
                 <Twitter className="w-6 h-6" />
               </a>
-              <a href="#" className="hover:text-[#00E5FF] transition-colors">
+              <a href="#" className="hover:text-[#EFBF04] transition-colors">
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="#" className="hover:text-[#00E5FF] transition-colors">
+              <a href="#" className="hover:text-[#EFBF04] transition-colors">
                 <Youtube className="w-6 h-6" />
               </a>
             </div>
@@ -68,11 +68,11 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:border-[#00E5FF] transition-colors"
+                className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:border-[#EFBF04] transition-colors"
               />
               <button
                 type="submit"
-                className="w-full px-4 py-2 bg-[#9003fc] hover:bg-[#7502d1] rounded-lg transition-colors"
+                className="w-full px-4 py-2 bg-[#EFBF04] hover:bg-[#D6AD04] rounded-lg transition-colors"
               >
                 Subscribe
               </button>

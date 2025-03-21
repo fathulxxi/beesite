@@ -58,7 +58,7 @@ const Portfolio = () => {
         />
       </div>
       <div className="p-6">
-        <h3 className="font-display text-xl font-bold text-gray-900 mb-2 group-hover:text-[#9003fc] transition-colors">
+        <h3 className="font-display text-xl font-bold text-gray-900 mb-2 group-hover:text-[#EFBF04] transition-colors">
           {project.name}
         </h3>
         <p className="text-gray-600 mb-4">{project.description}</p>
@@ -66,7 +66,7 @@ const Portfolio = () => {
           {project.tech.split(", ").map((tech, techIndex) => (
             <span
               key={techIndex}
-              className="inline-block px-3 py-1 text-sm bg-[#9003fc]/5 text-[#9003fc] rounded-full"
+              className="inline-block px-3 py-1 text-sm bg-[#EFBF04]/5 text-[#EFBF04] rounded-full"
             >
               {tech}
             </span>
@@ -80,16 +80,16 @@ const Portfolio = () => {
     <section id="portfolio" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 relative">
-          <span className="text-sm font-medium text-[#9003fc] tracking-wider uppercase mb-3 block">
+          <span className="text-sm font-medium text-[#EFBF04] tracking-wider uppercase mb-3 block">
             Our Work
           </span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#2A1D5C] to-[#9003fc] bg-clip-text text-transparent">
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#33280A] to-[#EFBF04] bg-clip-text text-transparent">
             Our Portfolio
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
             Trusted by world-class companies for delivering exceptional digital solutions.
           </p>
-          <div className="absolute left-1/2 -translate-x-1/2 -bottom-4 w-24 h-1 bg-gradient-to-r from-[#9003fc] to-[#00E5FF]" />
+          <div className="absolute left-1/2 -translate-x-1/2 -bottom-4 w-24 h-1 bg-gradient-to-r from-[#EFBF04] to-[#00E5FF]" />
         </div>
 
         <div className="relative px-12">

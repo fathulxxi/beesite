@@ -7,7 +7,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center bg-[#2A1D5C] overflow-hidden">
+    <div className="relative min-h-screen flex items-center bg-[#33280A] overflow-hidden">
       {/* Background with diagonal cut */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-white transform -skew-y-3 origin-left translate-y-16" />
 
@@ -18,7 +18,7 @@ const Hero = () => {
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
               Innovate with
               <br />
-              <span className="text-[#00E5FF]">Beesite</span>
+              <span className="text-[#EFBF04]">Beesite</span>
             </h1>
             <p className="max-w-xl text-lg md:text-xl text-gray-300 mb-8">
               We transform ideas into exceptional digital experiences, pushing the
@@ -26,7 +26,7 @@ const Hero = () => {
             </p>
             <button 
               onClick={handleGetStarted}
-              className="px-8 py-4 bg-[#FF3366] text-white rounded-lg font-medium hover:bg-[#E62E5C] transition-colors"
+              className="px-8 py-4 bg-[#EFBF04] text-white rounded-lg font-medium hover:bg-[#D6AD04] transition-colors"
             >
               Get Started
             </button>
@@ -52,7 +52,7 @@ const Hero = () => {
 
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#FF3366]/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#EFBF04]/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#00E5FF]/10 rounded-full blur-3xl" />
       </div>
     </div>

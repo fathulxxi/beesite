@@ -47,7 +47,7 @@ const Navbar = () => {
               </button>
             )}
             <Link to="/" className="flex-shrink-0">
-              <span className={`font-display font-bold text-xl ${isScrolled ? 'text-[#9003fc]' : 'text-white'}`}>Beesite</span>
+              <span className={`font-display font-bold text-xl ${isScrolled ? 'text-[#EFBF04]' : 'text-white'}`}>Beesite</span>
             </Link>
           </div>
           <div className="hidden md:block">
@@ -58,7 +58,7 @@ const Navbar = () => {
                   to={isHomePage ? `/#${item.toLowerCase()}` : `/#${item.toLowerCase()}`}
                   className={`font-medium text-sm transition-colors ${
                     isScrolled
-                      ? "text-gray-700 hover:text-[#9003fc]"
+                      ? "text-gray-700 hover:text-[#EFBF04]"
                       : "text-white/90 hover:text-white"
                   }`}
                   onClick={(e) => {
