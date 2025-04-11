@@ -23,7 +23,7 @@ const Index = () => {
       <About />
       <Services />
       <Portfolio />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
       <WhatsAppButton />
     </div>

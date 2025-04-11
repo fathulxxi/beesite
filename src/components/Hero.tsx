@@ -45,12 +45,12 @@ const Hero = () => {
                 <img
                   src="/lovable-uploads/f1ad8713-4dcd-4249-9882-26d48ab849b3.png"
                   alt="Character 1"
-                  className="w-[400px] h-auto transform translate-x-16 z-10 drop-shadow-xl"
+                  className="w-[600px] h-auto transform translate-x-32 z-10 drop-shadow-xl"
                 />
                 <img
                   src="/lovable-uploads/db8af31f-138a-433f-bd66-9b13f7076cf2.png"
                   alt="Character 2"
-                  className="w-[400px] h-auto transform -translate-x-16 drop-shadow-xl"
+                  className="w-[600px] h-auto transform -translate-x-32 drop-shadow-xl"
                 />
               </div>
             </div>

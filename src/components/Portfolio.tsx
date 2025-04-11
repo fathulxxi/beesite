@@ -10,40 +10,22 @@ import {
 const Portfolio = () => {
   const projects = [
     {
-      name: "Google",
-      description: "AI-powered search optimization platform",
+      name: "Schoolify",
+      description: "Education examination platform for schools",
       image: "https://images.unsplash.com/photo-1481487196290-c152efe083f5?q=80&w=1024&auto=format&fit=crop",
-      tech: "Machine Learning, Big Data",
+      tech: "Website, Cloud Computing",
     },
     {
-      name: "Microsoft",
-      description: "Enterprise cloud solutions architecture",
+      name: "Arista Management System",
+      description: "Company daily management system for Arista",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1024&auto=format&fit=crop",
-      tech: "Cloud Computing, Azure",
+      tech: "Website, CMS",
     },
     {
-      name: "Apple",
-      description: "iOS app development and UI/UX design",
+      name: "Travelby",
+      description: "Travel booking platform for travel agencies",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1024&auto=format&fit=crop",
-      tech: "iOS, Swift, Design Systems",
-    },
-    {
-      name: "Meta",
-      description: "Social media analytics dashboard",
-      image: "https://images.unsplash.com/photo-1597733336794-12d05021d510?q=80&w=1024&auto=format&fit=crop",
-      tech: "React, Data Visualization",
-    },
-    {
-      name: "Amazon",
-      description: "E-commerce platform optimization",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=1024&auto=format&fit=crop",
-      tech: "AWS, Microservices",
-    },
-    {
-      name: "Tesla",
-      description: "Vehicle management system interface",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1024&auto=format&fit=crop",
-      tech: "IoT, Real-time Analytics",
+      tech: "Mobile",
     },
   ];
 

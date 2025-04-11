@@ -86,7 +86,7 @@ const Navbar = () => {
               { key: "about", label: t('navbar.about') },
               { key: "services", label: t('navbar.services') },
               { key: "portfolio", label: t('navbar.portfolio') },
-              { key: "contact", label: t('navbar.contact') }
+              // { key: "contact", label: t('navbar.contact') }
             ].map((item) => (
               <button
                 key={item.key}
