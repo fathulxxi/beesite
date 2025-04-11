@@ -3,7 +3,7 @@ const Team = () => {
   return (
     <section id="team" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 relative">
+        <div className="text-center mb-16 relative" data-aos="fade-up" data-aos-delay="100">
           <span className="text-sm font-medium text-[#EFBF04] tracking-wider uppercase mb-3 block">
             Our People
           </span>
@@ -33,7 +33,12 @@ const Team = () => {
               image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?q=80&w=400&auto=format&fit=crop",
             },
           ].map((member, index) => (
-            <div key={index} className="text-center group">
+            <div 
+              key={index} 
+              className="text-center group"
+              data-aos="fade-up"
+              data-aos-delay={200 + (index * 150)}
+            >
               <div className="relative mb-6 inline-block">
                 <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-[#EFBF04]/10 transform transition-transform duration-300 group-hover:scale-105 group-hover:border-[#EFBF04]/30">
                   <img

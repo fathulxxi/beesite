@@ -1,0 +1,36 @@
+
+{
+  "hero": {
+    "title": "Berinovasi dengan",
+    "subtitle": "Kami mengubah ide menjadi pengalaman digital luar biasa, mendorong batas inovasi dan desain.",
+    "button": "Mulai Sekarang"
+  },
+  "about": {
+    "header": "Siapa Kami",
+    "title": "Tentang Kami",
+    "description": "Kami adalah tim individu yang penuh semangat yang berdedikasi untuk menciptakan pengalaman digital yang bermakna yang menginspirasi dan berinovasi.",
+    "innovation": {
+      "title": "Inovasi",
+      "description": "Mendorong batas dan mengeksplorasi kemungkinan baru dalam desain dan pengembangan digital."
+    },
+    "excellence": {
+      "title": "Keunggulan",
+      "description": "Berkomitmen untuk memberikan solusi berkualitas tinggi yang melebihi ekspektasi."
+    },
+    "collaboration": {
+      "title": "Kolaborasi",
+      "description": "Bekerja sama untuk mewujudkan ide melalui kemitraan yang efektif."
+    }
+  },
+  "navbar": {
+    "about": "Tentang",
+    "services": "Layanan",
+    "portfolio": "Portofolio",
+    "contact": "Kontak"
+  },
+  "footer": {
+    "navigation": "Navigasi",
+    "connectWithUs": "Terhubung Dengan Kami",
+    "copyright": "© {{year}} Beesite. Seluruh hak cipta."
+  }
+}

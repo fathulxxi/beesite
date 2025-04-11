@@ -1,47 +1,58 @@
 
+import { useTranslation } from 'react-i18next';
+import { BarChart3, Zap, Users } from 'lucide-react';
+
 const About = () => {
+  const { t } = useTranslation();
+  
+  const features = [
+    {
+      icon: <Zap className="h-8 w-8 text-primary" />,
+      title: t('about.innovation.title'),
+      description: t('about.innovation.description'),
+    },
+    {
+      icon: <BarChart3 className="h-8 w-8 text-primary" />,
+      title: t('about.excellence.title'),
+      description: t('about.excellence.description'),
+    },
+    {
+      icon: <Users className="h-8 w-8 text-primary" />,
+      title: t('about.collaboration.title'),
+      description: t('about.collaboration.description'),
+    },
+  ];
+  
   return (
-    <section id="about" className="py-24 bg-gradient-to-b from-white via-[#FFF8E0] to-white">
+    <section id="about" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 relative">
-          <span className="text-sm font-medium text-[#EFBF04] tracking-wider uppercase mb-3 block">
-            Who We Are
-          </span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#33280A] to-[#EFBF04] bg-clip-text text-transparent">
-            About Us
+        <div className="text-center mb-16" data-aos="fade-up" data-aos-delay="100">
+          <div className="inline-block px-4 py-1 bg-primary/10 rounded-full mb-4">
+            <span className="text-sm font-medium text-primary">{t('about.header')}</span>
+          </div>
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-secondary">
+            {t('about.title')}
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            We are a team of passionate individuals dedicated to creating
-            meaningful digital experiences that inspire and innovate.
+            {t('about.description')}
           </p>
-          <div className="absolute left-1/2 -translate-x-1/2 -bottom-4 w-24 h-1 bg-gradient-to-r from-[#EFBF04] to-[#00E5FF]" />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {[
-            {
-              title: "Innovation",
-              description:
-                "Pushing boundaries and exploring new possibilities in digital design and development.",
-            },
-            {
-              title: "Excellence",
-              description:
-                "Committed to delivering the highest quality solutions that exceed expectations.",
-            },
-            {
-              title: "Collaboration",
-              description:
-                "Working together to bring ideas to life through effective partnership.",
-            },
-          ].map((item, index) => (
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
             <div
               key={index}
-              className="p-8 rounded-2xl bg-white hover:bg-gray-50 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300"
+              className="p-8 rounded-2xl bg-white border border-gray-100 hover:border-primary/20 transition-all duration-300 shadow-card hover:shadow-xl hover:-translate-y-1"
+              data-aos="fade-up"
+              data-aos-delay={200 + (index * 100)}
             >
-              <h3 className="font-display text-xl font-bold mb-4">
-                {item.title}
+              <div className="p-3 rounded-xl bg-primary/10 inline-block mb-6">
+                {feature.icon}
+              </div>
+              <h3 className="font-display text-xl font-bold mb-4 text-secondary">
+                {feature.title}
               </h3>
-              <p className="text-gray-600">{item.description}</p>
+              <p className="text-gray-600">{feature.description}</p>
             </div>
           ))}
         </div>

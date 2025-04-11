@@ -26,19 +26,19 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#EFBF04", // Changed from #9003fc to gold
+          DEFAULT: "#EFBF04", // Gold color maintained
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#f5f5f5",
-          foreground: "#1a1a1a",
+          DEFAULT: "#1A1F2C", // Dark blue/purple similar to pluang
+          foreground: "#ffffff",
         },
         muted: {
           DEFAULT: "#f5f5f5",
           foreground: "#737373",
         },
         accent: {
-          DEFAULT: "#e5e5e5",
+          DEFAULT: "#F1F0FB", // Light purple for backgrounds
           foreground: "#1a1a1a",
         },
       },
@@ -65,10 +65,28 @@ export default {
             opacity: "1",
           },
         },
+        float: {
+          "0%": {
+            transform: "translateY(0px)",
+          },
+          "50%": {
+            transform: "translateY(-10px)",
+          },
+          "100%": {
+            transform: "translateY(0px)",
+          },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.5s ease-out",
         "fade-in": "fade-in 0.3s ease-out",
+        float: "float 6s ease-in-out infinite",
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      },
+      boxShadow: {
+        'card': '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01)',
       },
     },
   },

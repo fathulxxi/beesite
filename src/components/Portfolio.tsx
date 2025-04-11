@@ -48,7 +48,11 @@ const Portfolio = () => {
   ];
 
   const ProjectCard = ({ project }: { project: typeof projects[0] }) => (
-    <div className="group relative overflow-hidden rounded-2xl bg-white shadow-md transition-all hover:shadow-xl my-4 hover:translate-y-[-5px]">
+    <div 
+      className="overflow-hidden rounded-2xl bg-white shadow-card border border-gray-100 hover:border-primary/20 transition-all hover:shadow-xl my-4 hover:-translate-y-1 group"
+      data-aos="flip-up"
+      data-aos-delay="150"
+    >
       <div className="aspect-[16/10] overflow-hidden">
         <img
           src={project.image}
@@ -58,7 +62,7 @@ const Portfolio = () => {
         />
       </div>
       <div className="p-6">
-        <h3 className="font-display text-xl font-bold text-gray-900 mb-2 group-hover:text-[#EFBF04] transition-colors">
+        <h3 className="font-display text-xl font-bold text-secondary mb-2 group-hover:text-primary transition-colors">
           {project.name}
         </h3>
         <p className="text-gray-600 mb-4">{project.description}</p>
@@ -66,7 +70,7 @@ const Portfolio = () => {
           {project.tech.split(", ").map((tech, techIndex) => (
             <span
               key={techIndex}
-              className="inline-block px-3 py-1 text-sm bg-[#EFBF04]/5 text-[#EFBF04] rounded-full"
+              className="inline-block px-3 py-1 text-sm bg-primary/5 text-primary rounded-full"
             >
               {tech}
             </span>
@@ -79,20 +83,19 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 relative">
-          <span className="text-sm font-medium text-[#EFBF04] tracking-wider uppercase mb-3 block">
-            Our Work
-          </span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#33280A] to-[#EFBF04] bg-clip-text text-transparent">
+        <div className="text-center mb-16" data-aos="fade-up" data-aos-delay="100">
+          <div className="inline-block px-4 py-1 bg-primary/10 rounded-full mb-4">
+            <span className="text-sm font-medium text-primary">Our Work</span>
+          </div>
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-secondary">
             Our Portfolio
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
             Trusted by world-class companies for delivering exceptional digital solutions.
           </p>
-          <div className="absolute left-1/2 -translate-x-1/2 -bottom-4 w-24 h-1 bg-gradient-to-r from-[#EFBF04] to-[#00E5FF]" />
         </div>
 
-        <div className="relative px-12">
+        <div className="relative px-12" data-aos="fade-up" data-aos-delay="200">
           <Carousel
             opts={{
               align: "start",
@@ -107,8 +110,8 @@ const Portfolio = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
+            <CarouselPrevious className="hidden md:flex border-gray-200 hover:bg-primary hover:text-white" />
+            <CarouselNext className="hidden md:flex border-gray-200 hover:bg-primary hover:text-white" />
           </Carousel>
         </div>
       </div>

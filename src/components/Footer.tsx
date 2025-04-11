@@ -1,37 +1,45 @@
 
-import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Facebook, Instagram, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-[#33280A] text-white">
+    <footer className="bg-secondary text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Address */}
           <div>
-            <h3 className="font-display text-xl font-bold mb-4">Beesite</h3>
-            <address className="not-italic">
-              <p className="mb-2">123 Innovation Street</p>
-              <p className="mb-2">Tech Valley, CA 94043</p>
-              <p className="mb-2">United States</p>
-              <p className="mb-2">Phone: (123) 456-7890</p>
-              <p>Email: info@beesite.com</p>
+            <div className="flex items-center mb-4">
+              <span className="text-primary text-2xl font-bold mr-2">Beesite</span>
+              <span className="text-xs px-2 py-1 bg-primary/20 rounded-full text-primary">Digital Agency</span>
+            </div>
+            <address className="not-italic text-gray-400">
+              <p className="mb-2">Jln. Angsana, Maros, Sulawesi Selatan</p>
+              <p className="mb-2">Indonesia</p>
+              <p className="mb-2">Email: beesite.id@gmail.com</p>
             </address>
           </div>
 
           {/* Navigation */}
           <div>
-            <h3 className="font-display text-xl font-bold mb-4">Navigation</h3>
-            <ul className="space-y-2">
-              {["About", "Services", "Portfolio", "Team", "Contact"].map((item) => (
-                <li key={item}>
+            <h3 className="font-display text-xl font-bold mb-4 text-white">{t('footer.navigation')}</h3>
+            <ul className="space-y-3">
+              {[
+                { key: "about", label: t('navbar.about') },
+                { key: "services", label: t('navbar.services') },
+                { key: "portfolio", label: t('navbar.portfolio') },
+                { key: "contact", label: t('navbar.contact') }
+              ].map((item) => (
+                <li key={item.key}>
                   <a
-                    href={`#${item.toLowerCase()}`}
-                    className="hover:text-[#EFBF04] transition-colors"
+                    href={`#${item.key}`}
+                    className="text-gray-400 hover:text-primary transition-colors"
                   >
-                    {item}
+                    {item.label}
                   </a>
                 </li>
               ))}
@@ -40,49 +48,29 @@ const Footer = () => {
 
           {/* Social Media */}
           <div>
-            <h3 className="font-display text-xl font-bold mb-4">Connect With Us</h3>
+            <h3 className="font-display text-xl font-bold mb-4 text-white">{t('footer.connectWithUs')}</h3>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-[#EFBF04] transition-colors">
-                <Facebook className="w-6 h-6" />
+              <a href="#" className="p-3 bg-white/5 rounded-full hover:bg-primary/20 hover:text-primary transition-colors">
+                <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="hover:text-[#EFBF04] transition-colors">
-                <Instagram className="w-6 h-6" />
+              <a 
+                href="https://www.instagram.com/beesite.id" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="p-3 bg-white/5 rounded-full hover:bg-primary/20 hover:text-primary transition-colors"
+              >
+                <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="hover:text-[#EFBF04] transition-colors">
-                <Twitter className="w-6 h-6" />
-              </a>
-              <a href="#" className="hover:text-[#EFBF04] transition-colors">
-                <Linkedin className="w-6 h-6" />
-              </a>
-              <a href="#" className="hover:text-[#EFBF04] transition-colors">
-                <Youtube className="w-6 h-6" />
+              <a href="#" className="p-3 bg-white/5 rounded-full hover:bg-primary/20 hover:text-primary transition-colors">
+                <Twitter className="w-5 h-5" />
               </a>
             </div>
-          </div>
-
-          {/* Newsletter */}
-          <div>
-            <h3 className="font-display text-xl font-bold mb-4">Newsletter</h3>
-            <p className="mb-4">Subscribe to our newsletter for updates</p>
-            <form className="space-y-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:border-[#EFBF04] transition-colors"
-              />
-              <button
-                type="submit"
-                className="w-full px-4 py-2 bg-[#EFBF04] hover:bg-[#D6AD04] rounded-lg transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
           </div>
         </div>
 
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-white/10 text-center">
-          <p>© {currentYear} Beesite. All rights reserved.</p>
+          <p className="text-gray-400">{t('footer.copyright', { year: currentYear })}</p>
         </div>
       </div>
     </footer>

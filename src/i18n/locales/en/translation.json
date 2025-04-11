@@ -1,0 +1,36 @@
+
+{
+  "hero": {
+    "title": "Innovate with",
+    "subtitle": "We transform ideas into exceptional digital experiences, pushing the boundaries of innovation and design.",
+    "button": "Get Started"
+  },
+  "about": {
+    "header": "Who We Are",
+    "title": "About Us",
+    "description": "We are a team of passionate individuals dedicated to creating meaningful digital experiences that inspire and innovate.",
+    "innovation": {
+      "title": "Innovation",
+      "description": "Pushing boundaries and exploring new possibilities in digital design and development."
+    },
+    "excellence": {
+      "title": "Excellence",
+      "description": "Committed to delivering the highest quality solutions that exceed expectations."
+    },
+    "collaboration": {
+      "title": "Collaboration",
+      "description": "Working together to bring ideas to life through effective partnership."
+    }
+  },
+  "navbar": {
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "connectWithUs": "Connect With Us",
+    "copyright": "© {{year}} Beesite. All rights reserved."
+  }
+}
