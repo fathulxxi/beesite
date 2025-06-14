@@ -26,11 +26,11 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#EFBF04", // Gold color maintained
-          foreground: "#ffffff",
+          DEFAULT: "#FFD700", // Gold color
+          foreground: "#000000",
         },
         secondary: {
-          DEFAULT: "#1A1F2C", // Dark blue/purple similar to pluang
+          DEFAULT: "#9003fc", // Purple color
           foreground: "#ffffff",
         },
         muted: {
@@ -38,7 +38,7 @@ export default {
           foreground: "#737373",
         },
         accent: {
-          DEFAULT: "#F1F0FB", // Light purple for backgrounds
+          DEFAULT: "#F8F6FF", // Very light purple for backgrounds
           foreground: "#1a1a1a",
         },
       },
@@ -86,7 +86,7 @@ export default {
         '4xl': '2rem',
       },
       boxShadow: {
-        'card': '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01)',
+        'card': '0 10px 25px -5px rgba(144, 3, 252, 0.1), 0 8px 10px -6px rgba(144, 3, 252, 0.05)',
       },
     },
   },
