@@ -55,8 +55,8 @@ const testimonials = [
 
 const Testimonial = () => {
   return (
-    <section id="testimonials" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="h-screen flex items-center bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="text-center mb-16" data-aos="fade-up" data-aos-delay="100">
           <div className="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full mb-6">
             <span className="text-sm font-medium text-secondary">Client Feedback</span>

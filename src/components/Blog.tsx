@@ -56,8 +56,8 @@ const blogPosts = [
 
 const Blog = () => {
   return (
-    <section id="blog" className="py-24 bg-gradient-to-b from-accent/30 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="h-screen flex items-center bg-gradient-to-b from-accent/30 to-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="text-center mb-16" data-aos="fade-up" data-aos-delay="100">
           <div className="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full mb-6">
             <span className="text-sm font-medium text-secondary">Latest Articles</span>
