@@ -6,14 +6,15 @@ const Hero = () => {
   const { t } = useTranslation();
   
   const handleGetStarted = () => {
-    window.scrollTo({
-      top: window.innerHeight,
+    document.getElementById('about')?.scrollIntoView({
       behavior: 'smooth'
     });
   };
 
   return (
-    <div className="relative h-screen flex items-center bg-gradient-to-br from-white via-accent/30 to-primary/10 overflow-hidden">
+    <div className="relative min-h-screen flex items-center bg-white overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-accent via-white to-primary/5" />
       
       {/* Floating elements */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full blur-xl animate-float" />
@@ -23,7 +24,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
-          <div className="text-left" data-aos="fade-right" data-aos-delay="200">
+          <div className="text-left pt-20 lg:pt-0" data-aos="fade-right" data-aos-delay="200">
             <div className="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full mb-6">
               <div className="w-2 h-2 bg-secondary rounded-full mr-2 animate-pulse" />
               <span className="text-sm font-medium text-secondary">Digital Innovation Agency</span>
@@ -49,10 +50,7 @@ const Hero = () => {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </button>
               
-              <button 
-                onClick={() => window.scrollTo({ top: window.innerHeight * 3, behavior: 'smooth' })}
-                className="px-8 py-4 border-2 border-gray-200 text-gray-900 rounded-2xl font-medium hover:border-secondary hover:text-secondary transition-all"
-              >
+              <button className="px-8 py-4 border-2 border-gray-200 text-gray-900 rounded-2xl font-medium hover:border-secondary hover:text-secondary transition-all">
                 View Our Work
               </button>
             </div>

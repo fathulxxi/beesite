@@ -1,83 +1,76 @@
 
-import { Heart, Mail, MapPin, Phone } from "lucide-react";
+import { Facebook, Instagram, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+  const currentYear = new Date().getFullYear();
+  
   return (
-    <footer className="h-screen flex items-center bg-gray-50 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          <div className="md:col-span-2">
+    <footer className="bg-gradient-to-br from-secondary to-secondary/90 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          {/* Address */}
+          <div>
             <div className="flex items-center mb-6">
-              <span className="font-display font-bold text-2xl text-secondary">Beesite</span>
-              <span className="ml-2 text-xs px-3 py-1 rounded-full font-medium bg-secondary/10 text-secondary">
-                Digital
-              </span>
+              <span className="text-white text-2xl font-bold mr-3">Beesite</span>
+              <span className="text-xs px-3 py-1 bg-primary/20 rounded-full text-primary font-medium">Digital Agency</span>
             </div>
-            <p className="text-gray-600 mb-6 leading-relaxed max-w-md">
-              Transforming ideas into exceptional digital experiences. We're your trusted partner for innovative web solutions and digital growth.
-            </p>
-            <div className="space-y-3">
-              <div className="flex items-center text-gray-600">
-                <Mail className="h-5 w-5 mr-3 text-secondary" />
-                <span>hello@beesite.com</span>
-              </div>
-              <div className="flex items-center text-gray-600">
-                <Phone className="h-5 w-5 mr-3 text-secondary" />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center text-gray-600">
-                <MapPin className="h-5 w-5 mr-3 text-secondary" />
-                <span>San Francisco, CA</span>
-              </div>
-            </div>
+            <address className="not-italic text-white/80 leading-relaxed">
+              <p className="mb-2">Jln. Angsana, Maros, Sulawesi Selatan</p>
+              <p className="mb-2">Indonesia</p>
+              <p className="mb-2">Email: beesite.id@gmail.com</p>
+            </address>
           </div>
 
+          {/* Navigation */}
           <div>
-            <h3 className="font-display font-bold text-lg mb-6 text-gray-900">Quick Links</h3>
+            <h3 className="font-display text-xl font-bold mb-6 text-white">{t('footer.navigation')}</h3>
             <ul className="space-y-3">
               {[
-                { name: "About Us", href: "#about" },
-                { name: "Services", href: "#services" },
-                { name: "Portfolio", href: "#portfolio" },
-                { name: "Blog", href: "/blog" },
-              ].map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-gray-600 hover:text-secondary transition-colors"
+                { key: "about", label: t('navbar.about') },
+                { key: "services", label: t('navbar.services') },
+                { key: "portfolio", label: t('navbar.portfolio') },
+                { key: "contact", label: t('navbar.contact') }
+              ].map((item) => (
+                <li key={item.key}>
+                  <a
+                    href={`#${item.key}`}
+                    className="text-white/80 hover:text-white transition-colors hover:underline"
                   >
-                    {link.name}
-                  </Link>
+                    {item.label}
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
 
+          {/* Social Media */}
           <div>
-            <h3 className="font-display font-bold text-lg mb-6 text-gray-900">Services</h3>
-            <ul className="space-y-3">
-              {[
-                "Web Development",
-                "UI/UX Design",
-                "Digital Strategy",
-                "Brand Identity",
-              ].map((service) => (
-                <li key={service}>
-                  <span className="text-gray-600">{service}</span>
-                </li>
-              ))}
-            </ul>
+            <h3 className="font-display text-xl font-bold mb-6 text-white">{t('footer.connectWithUs')}</h3>
+            <div className="flex space-x-4">
+              <a href="#" className="p-3 bg-white/10 rounded-full hover:bg-primary/20 hover:text-primary transition-all">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://www.instagram.com/beesite.id" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="p-3 bg-white/10 rounded-full hover:bg-primary/20 hover:text-primary transition-all"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="#" className="p-3 bg-white/10 rounded-full hover:bg-primary/20 hover:text-primary transition-all">
+                <Twitter className="w-5 h-5" />
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-200 pt-8 text-center">
-          <p className="text-gray-600 flex items-center justify-center">
-            Made with <Heart className="h-4 w-4 mx-2 text-red-500" /> by Beesite Team
-          </p>
-          <p className="text-gray-500 text-sm mt-2">
-            © {new Date().getFullYear()} Beesite. All rights reserved.
-          </p>
+        {/* Copyright */}
+        <div className="mt-12 pt-8 border-t border-white/20 text-center">
+          <p className="text-white/80">{t('footer.copyright', { year: currentYear })}</p>
         </div>
       </div>
     </footer>

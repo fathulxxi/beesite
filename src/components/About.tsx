@@ -24,8 +24,8 @@ const About = () => {
   ];
   
   return (
-    <section className="h-screen flex items-center bg-gradient-to-b from-white to-accent/30 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <section id="about" className="py-24 bg-gradient-to-b from-white to-accent/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16" data-aos="fade-up" data-aos-delay="100">
           <div className="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full mb-6">
             <span className="text-sm font-medium text-secondary">{t('about.header')}</span>
