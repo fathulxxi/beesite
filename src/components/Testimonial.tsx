@@ -57,19 +57,20 @@ const Testimonial = () => {
   return (
     <section id="testimonials" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16" data-aos="fade-up" data-aos-delay="100">
-          <div className="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full mb-6">
-            <span className="text-sm font-medium text-secondary">Client Feedback</span>
-          </div>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-            What Our Clients Say
+        <div className="text-center mb-16 relative">
+          <span className="text-sm font-medium text-[#EFBF04] tracking-wider uppercase mb-3 block">
+            Client Feedback
+          </span>
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#33280A] to-[#EFBF04] bg-clip-text text-transparent">
+            Testimonials
           </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
-            Hear what our clients have to say about their experience working with us and the results we've delivered.
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            Hear what our clients have to say about their experience working with us.
           </p>
+          <div className="absolute left-1/2 -translate-x-1/2 -bottom-4 w-24 h-1 bg-gradient-to-r from-[#EFBF04] to-[#00E5FF]" />
         </div>
 
-        <div className="relative px-12" data-aos="fade-up" data-aos-delay="200">
+        <div className="relative px-12">
           <Carousel
             opts={{
               align: "start",
@@ -79,10 +80,10 @@ const Testimonial = () => {
           >
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 px-2">
-                  <div className="bg-white rounded-3xl shadow-card p-8 h-full flex flex-col hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-secondary/20">
-                    <div className="flex items-center mb-6">
-                      <div className="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-secondary/10">
+                <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/3 px-2">
+                  <div className="bg-white rounded-2xl shadow-md p-8 h-full flex flex-col hover:shadow-lg transition-shadow">
+                    <div className="flex items-center mb-4">
+                      <div className="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-[#EFBF04]/10">
                         <img
                           src={testimonial.image}
                           alt={testimonial.name}
@@ -92,28 +93,28 @@ const Testimonial = () => {
                       </div>
                       <div>
                         <h3 className="font-bold text-lg text-gray-900">{testimonial.name}</h3>
-                        <p className="text-secondary text-sm font-medium">{testimonial.company}</p>
+                        <p className="text-[#EFBF04] text-sm">{testimonial.company}</p>
                       </div>
                     </div>
                     
                     <div className="flex mb-4">
                       {Array.from({ length: testimonial.rating }).map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                        <Star key={i} className="w-4 h-4 fill-[#EFBF04] text-[#EFBF04]" />
                       ))}
                       {Array.from({ length: 5 - testimonial.rating }).map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-gray-300" />
+                        <Star key={i} className="w-4 h-4 text-gray-300" />
                       ))}
                     </div>
                     
-                    <blockquote className="text-gray-600 italic flex-grow leading-relaxed">
+                    <blockquote className="text-gray-600 italic flex-grow">
                       "{testimonial.testimonial}"
                     </blockquote>
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex border-gray-200 hover:bg-secondary hover:text-white hover:border-secondary" />
-            <CarouselNext className="hidden md:flex border-gray-200 hover:bg-secondary hover:text-white hover:border-secondary" />
+            <CarouselPrevious />
+            <CarouselNext />
           </Carousel>
         </div>
       </div>

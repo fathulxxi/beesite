@@ -1,92 +1,71 @@
 
 import { useTranslation } from 'react-i18next';
-import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   const { t } = useTranslation();
   
   const handleGetStarted = () => {
-    document.getElementById('about')?.scrollIntoView({
+    document.getElementById('contact')?.scrollIntoView({
       behavior: 'smooth'
     });
   };
 
   return (
-    <div className="relative min-h-screen flex items-center bg-white overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-accent via-white to-primary/5" />
-      
-      {/* Floating elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full blur-xl animate-float" />
-      <div className="absolute top-40 right-20 w-32 h-32 bg-secondary/10 rounded-full blur-xl animate-float" style={{ animationDelay: "2s" }} />
-      <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-primary/20 rounded-full blur-xl animate-float" style={{ animationDelay: "4s" }} />
+    <div className="relative min-h-screen flex items-center bg-gradient-to-b from-secondary to-[#111827] overflow-hidden">
+      {/* Background with rounded design */}
+      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:30px_30px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
-          <div className="text-left pt-20 lg:pt-0" data-aos="fade-right" data-aos-delay="200">
-            <div className="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full mb-6">
-              <div className="w-2 h-2 bg-secondary rounded-full mr-2 animate-pulse" />
-              <span className="text-sm font-medium text-secondary">Digital Innovation Agency</span>
+          <div className="text-left text-white pt-20 lg:pt-0" data-aos="fade-right" data-aos-delay="200">
+            <div className="inline-block px-4 py-1 bg-primary/10 rounded-full mb-4">
+              <span className="text-sm font-medium text-primary">Beesite — Digital Innovation</span>
             </div>
-            
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gray-900 leading-tight">
-              {t('hero.title').split(' ').slice(0, -1).join(' ')}{' '}
-              <span className="text-transparent bg-gradient-to-r from-secondary to-primary bg-clip-text">
-                Beesite
-              </span>
+            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+              {t('hero.title')}
+              <br />
+              <span className="text-primary animate-pulse">Beesite</span>
             </h1>
-            
-            <p className="max-w-xl text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="max-w-xl text-lg md:text-xl text-gray-300 mb-8">
               {t('hero.subtitle')}
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button 
-                onClick={handleGetStarted}
-                className="group px-8 py-4 bg-secondary text-white rounded-2xl font-medium hover:bg-secondary/90 transition-all hover:shadow-lg hover:shadow-secondary/25 flex items-center justify-center"
-              >
-                {t('hero.button')}
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              
-              <button className="px-8 py-4 border-2 border-gray-200 text-gray-900 rounded-2xl font-medium hover:border-secondary hover:text-secondary transition-all">
-                View Our Work
-              </button>
-            </div>
+            <button 
+              onClick={handleGetStarted}
+              className="px-8 py-4 bg-primary text-white rounded-xl font-medium hover:bg-primary/90 transition-all hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1"
+            >
+              {t('hero.button')}
+            </button>
           </div>
 
-          {/* Right content - Modern illustration */}
+          {/* Right content - Images */}
           <div className="relative hidden lg:block" data-aos="fade-left" data-aos-delay="300">
-            <div className="relative">
-              {/* Main illustration container */}
-              <div className="relative bg-gradient-to-br from-secondary/5 to-primary/5 rounded-3xl p-8 backdrop-blur-sm">
-                <div className="flex justify-center items-center space-x-4">
-                  <img
-                    src="/lovable-uploads/f1ad8713-4dcd-4249-9882-26d48ab849b3.png"
-                    alt="Digital Innovation"
-                    className="w-80 h-auto transform hover:scale-105 transition-transform duration-500 drop-shadow-2xl"
-                  />
-                </div>
-              </div>
-              
-              {/* Floating cards */}
-              <div className="absolute -top-4 -left-4 bg-white rounded-xl shadow-lg p-4 animate-float">
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="text-sm font-medium text-gray-700">99% Uptime</span>
-                </div>
-              </div>
-              
-              <div className="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-lg p-4 animate-float" style={{ animationDelay: "1s" }}>
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-primary rounded-full"></div>
-                  <span className="text-sm font-medium text-gray-700">Fast Delivery</span>
-                </div>
+            <div className="relative z-10 animate-float">
+              <div className="flex justify-center items-end">
+                <img
+                  src="/lovable-uploads/f1ad8713-4dcd-4249-9882-26d48ab849b3.png"
+                  alt="Character 1"
+                  className="w-[600px] h-auto transform translate-x-32 z-10 drop-shadow-xl"
+                />
+                <img
+                  src="/lovable-uploads/db8af31f-138a-433f-bd66-9b13f7076cf2.png"
+                  alt="Character 2"
+                  className="w-[600px] h-auto transform -translate-x-32 drop-shadow-xl"
+                />
               </div>
             </div>
+            
+            {/* Decorative elements - hexagon shapes */}
+            <div className="absolute top-1/3 right-1/4 w-24 h-24 border-2 border-primary/20 rounded-xl rotate-45 animate-float" style={{ animationDelay: "1s" }} />
+            <div className="absolute bottom-1/4 left-1/3 w-16 h-16 border-2 border-primary/30 rounded-xl rotate-12 animate-float" style={{ animationDelay: "2s" }} />
           </div>
         </div>
+      </div>
+
+      {/* Decorative Elements - Updated to lighter colors */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl" data-aos="zoom-in" data-aos-delay="400" />
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#00E5FF]/5 rounded-full blur-3xl" data-aos="zoom-in" data-aos-delay="600" />
       </div>
     </div>
   );

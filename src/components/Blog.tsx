@@ -1,7 +1,6 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 
 const blogPosts = [
   {
@@ -56,46 +55,46 @@ const blogPosts = [
 
 const Blog = () => {
   return (
-    <section id="blog" className="py-24 bg-gradient-to-b from-accent/30 to-white">
+    <section id="blog" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16" data-aos="fade-up" data-aos-delay="100">
-          <div className="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full mb-6">
-            <span className="text-sm font-medium text-secondary">Latest Articles</span>
-          </div>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+        <div className="text-center mb-16 relative">
+          <span className="text-sm font-medium text-[#EFBF04] tracking-wider uppercase mb-3 block">
+            Latest Articles
+          </span>
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#33280A] to-[#EFBF04] bg-clip-text text-transparent">
             Our Blog
           </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
-            Stay updated with the latest insights, trends, and tips in the digital world to keep your business ahead.
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            Stay updated with the latest insights, trends, and tips in the digital world.
           </p>
+          <div className="absolute left-1/2 -translate-x-1/2 -bottom-4 w-24 h-1 bg-gradient-to-r from-[#EFBF04] to-[#00E5FF]" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="200">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {blogPosts.slice(0, 3).map((post) => (
             <div
               key={post.id}
-              className="group bg-white rounded-3xl shadow-card overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-secondary/20"
+              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
             >
               <div className="h-48 overflow-hidden">
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                   loading="lazy"
                 />
               </div>
-              <div className="p-8">
-                <div className="text-sm text-secondary mb-3 font-medium">
+              <div className="p-6">
+                <div className="text-sm text-gray-500 mb-2">
                   {post.author} • {post.date}
                 </div>
-                <h3 className="font-display text-xl font-bold mb-4 hover:text-secondary transition-colors line-clamp-2">
+                <h3 className="font-display text-xl font-bold mb-3 hover:text-[#EFBF04] transition-colors">
                   {post.title}
                 </h3>
-                <p className="text-gray-600 mb-6 line-clamp-3 leading-relaxed">{post.description}</p>
+                <p className="text-gray-600 mb-4 line-clamp-3">{post.description}</p>
                 <Link to={`/blog/${post.id}`}>
-                  <Button className="group px-0 py-0 h-auto text-secondary hover:text-secondary/80 transition-colors bg-transparent hover:bg-transparent font-medium">
-                    Read More 
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <Button className="px-0 py-0 h-auto text-[#EFBF04] hover:text-[#D6AD04] transition-colors bg-transparent hover:bg-transparent">
+                    Read More →
                   </Button>
                 </Link>
               </div>
@@ -103,11 +102,10 @@ const Blog = () => {
           ))}
         </div>
 
-        <div className="flex justify-center mt-12" data-aos="fade-up" data-aos-delay="300">
+        <div className="flex justify-center mt-12">
           <Link to="/blog">
-            <Button className="px-8 py-4 h-auto bg-secondary hover:bg-secondary/90 text-white rounded-2xl transition-all font-medium shadow-lg hover:shadow-xl">
+            <Button className="px-8 py-3 h-auto bg-[#EFBF04] hover:bg-[#D6AD04] text-white rounded-lg transition-colors">
               See All Articles
-              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
         </div>

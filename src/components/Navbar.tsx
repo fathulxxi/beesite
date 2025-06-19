@@ -50,7 +50,7 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled || isMenuOpen
-          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
+          ? "bg-white/90 backdrop-blur-md shadow-sm"
           : "bg-transparent"
       }`}
     >
@@ -60,10 +60,10 @@ const Navbar = () => {
             {!isHomePage && (
               <button 
                 onClick={handleGoBack}
-                className={`mr-4 p-2 rounded-xl transition-all ${
+                className={`mr-4 p-2 rounded-full ${
                   isScrolled || isMenuOpen
-                    ? "text-gray-700 hover:bg-gray-100" 
-                    : "text-gray-700 hover:bg-white/10"
+                    ? "text-secondary hover:bg-gray-100" 
+                    : "text-white/90 hover:bg-white/10"
                 }`}
                 aria-label="Go back"
               >
@@ -71,11 +71,11 @@ const Navbar = () => {
               </button>
             )}
             <Link to="/" className="flex items-center">
-              <span className={`font-display font-bold text-2xl ${isScrolled || isMenuOpen ? 'text-secondary' : 'text-secondary'}`}>
+              <span className={`font-display font-bold text-xl ${isScrolled || isMenuOpen ? 'text-primary' : 'text-white'}`}>
                 Beesite
               </span>
-              <span className={`ml-2 text-xs px-3 py-1 rounded-full font-medium ${isScrolled || isMenuOpen ? 'bg-secondary/10 text-secondary' : 'bg-secondary/10 text-secondary'}`}>
-                Digital
+              <span className={`ml-2 text-xs px-2 py-1 ${isScrolled || isMenuOpen ? 'bg-primary/10 text-primary' : 'bg-white/10 text-white'} rounded-full`}>
+                ID
               </span>
             </Link>
           </div>
@@ -86,28 +86,28 @@ const Navbar = () => {
               { key: "about", label: t('navbar.about') },
               { key: "services", label: t('navbar.services') },
               { key: "portfolio", label: t('navbar.portfolio') },
+              // { key: "contact", label: t('navbar.contact') }
             ].map((item) => (
               <button
                 key={item.key}
                 onClick={() => scrollToSection(item.key)}
-                className={`font-medium text-sm transition-colors relative group ${
+                className={`font-medium text-sm transition-colors ${
                   isScrolled
-                    ? "text-gray-700 hover:text-secondary"
-                    : "text-gray-700 hover:text-secondary"
+                    ? "text-secondary hover:text-primary"
+                    : "text-white/90 hover:text-white"
                 }`}
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all group-hover:w-full"></span>
               </button>
             ))}
             
             {/* Language toggle button */}
             <button
               onClick={toggleLanguage}
-              className={`font-medium text-sm transition-all px-4 py-2 rounded-xl ${
+              className={`font-medium text-sm transition-colors px-3 py-2 rounded-xl ${
                 isScrolled
-                  ? "bg-secondary/10 text-secondary hover:bg-secondary/20"
-                  : "bg-secondary/10 text-secondary hover:bg-secondary/20"
+                  ? "bg-primary/10 text-primary hover:bg-primary/20"
+                  : "bg-white/10 text-white/90 hover:bg-white/20"
               }`}
             >
               {i18n.language === 'id' ? 'EN' : 'ID'}
@@ -118,10 +118,10 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`p-2 rounded-xl transition-all ${
+              className={`p-2 rounded-full ${
                 isScrolled || isMenuOpen
-                  ? "text-gray-700 hover:bg-gray-100" 
-                  : "text-gray-700 hover:bg-white/10"
+                  ? "text-secondary hover:bg-gray-100" 
+                  : "text-white hover:bg-white/10"
               }`}
             >
               {isMenuOpen ? (
@@ -135,7 +135,7 @@ const Navbar = () => {
         
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white shadow-lg rounded-b-2xl animate-fade-in border-t border-gray-100">
+          <div className="md:hidden bg-white shadow-lg rounded-b-2xl animate-fade-in">
             <div className="px-4 pt-2 pb-6 space-y-4">
               {[
                 { key: "about", label: t('navbar.about') },
@@ -145,7 +145,7 @@ const Navbar = () => {
               ].map((item) => (
                 <button
                   key={item.key}
-                  className="block w-full text-left py-3 text-gray-700 hover:text-secondary font-medium transition-colors"
+                  className="block w-full text-left py-3 text-secondary hover:text-primary font-medium"
                   onClick={() => scrollToSection(item.key)}
                 >
                   {item.label}
@@ -159,7 +159,7 @@ const Navbar = () => {
                     toggleLanguage();
                     setIsMenuOpen(false);
                   }}
-                  className="w-full text-left py-3 text-gray-700 hover:text-secondary font-medium transition-colors"
+                  className="w-full text-left py-3 text-secondary hover:text-primary font-medium"
                 >
                   {i18n.language === 'id' ? 'Switch to English' : 'Ganti ke Bahasa Indonesia'}
                 </button>
